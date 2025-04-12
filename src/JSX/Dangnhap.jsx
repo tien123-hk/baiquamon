@@ -46,7 +46,7 @@ const AuthPopup = ({ isOpen, onClose, onLoginSuccess }) => {
            
             if (formData.email === 'admin') {
                 try {
-                    const adminResponse = await axios.post('http://localhost:8086/admin/login', {
+                    const adminResponse = await axios.post('https://be-1lkh.onrender.com/admin/login', {
                         username: formData.email,
                         password: formData.password
                     });
@@ -71,7 +71,7 @@ const AuthPopup = ({ isOpen, onClose, onLoginSuccess }) => {
             }
 
             // Regular user login
-            const response = await axios.post('http://localhost:8086/BE/auth/login', loginData);
+            const response = await axios.post('https://be-1lkh.onrender.com/BE/auth/login', loginData);
 
             if (response.data) {
                 localStorage.setItem('user', JSON.stringify(response.data));
@@ -106,7 +106,7 @@ const AuthPopup = ({ isOpen, onClose, onLoginSuccess }) => {
                 image: formData.image || ''
             };
 
-            const response = await axios.post('http://localhost:8086/BE/auth/register', registerData);
+            const response = await axios.post('https://be-1lkh.onrender.com/BE/auth/register', registerData);
             
             if (response.data) {
                 alert("Registration successful! Please login.");

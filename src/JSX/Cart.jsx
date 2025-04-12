@@ -52,7 +52,7 @@ const Cart = () => {
     const fetchCartItems = async (userId) => {
         try {
             console.log('Fetching cart for userId:', userId);
-            const response = await axios.get(`http://localhost:8086/cart/${userId}`);
+            const response = await axios.get(`https://be-1lkh.onrender.com/cart/${userId}`);
             console.log('Cart response:', response.data);
             setCartItems(response.data);
         } catch (error) {
@@ -63,7 +63,7 @@ const Cart = () => {
     const handleRemoveItem = async (itemId) => {
         if (!user) return;
         try {
-            await axios.delete(`http://localhost:8086/cart/${user.id}/${itemId}`);
+            await axios.delete(`https://be-1lkh.onrender.com/cart/${user.id}/${itemId}`);
             // Fetch updated cart items immediately after deletion
             await fetchCartItems(user.id);
             alert('Item removed from cart successfully');
@@ -76,7 +76,7 @@ const Cart = () => {
     const handleQuantityChange = async (itemId, newQuantity) => {
         if (!user) return;
         try {
-            await axios.put(`http://localhost:8086/cart/update/${itemId}`, {
+            await axios.put(`https://be-1lkh.onrender.com/cart/update/${itemId}`, {
                 userId: user.id,
                 quantity: parseInt(newQuantity)
             });
@@ -116,11 +116,11 @@ const Cart = () => {
             };
 
             // Create order first
-            const response = await axios.post('http://localhost:8086/orders', orderData);
+            const response = await axios.post('https://be-1lkh.onrender.com/orders', orderData);
 
             if (response.data) {
                 // Clear all items from cart
-                await axios.delete(`http://localhost:8086/cart/${user.id}`);
+                await axios.delete(`https://be-1lkh.onrender.com/cart/${user.id}`);
 
                 // Reset local state
                 setCartItems([]);
@@ -152,11 +152,11 @@ const Cart = () => {
                 };
 
                 // Gửi đơn hàng lên server
-                const response = await axios.post('http://localhost:8086/orders', finalOrderData);
+                const response = await axios.post('https://be-1lkh.onrender.com/orders', finalOrderData);
 
                 if (response.data) {
                     // Xóa giỏ hàng sau khi đặt hàng thành công
-                    await axios.delete(`http://localhost:8086/cart/${orderData.userId}`);
+                    await axios.delete(`https://be-1lkh.onrender.com/cart/${orderData.userId}`);
                     alert('Đặt hàng thành công!');
                     onSelectPayment('cod'); // Đóng popup và cập nhật trạng thái
                 }
@@ -223,9 +223,9 @@ const Cart = () => {
                 }
             };
 
-            const response = await axios.post('http://localhost:8086/orders', orderData);
+            const response = await axios.post('https://be-1lkh.onrender.com/orders', orderData);
             if (response.data) {
-                await axios.delete(`http://localhost:8086/cart/${user.id}`);
+                await axios.delete(`https://be-1lkh.onrender.com/cart/${user.id}`);
                 setCartItems([]);
                 setIsCheckoutOpen(false);
                 setCustomerInfo({
@@ -254,7 +254,7 @@ const Cart = () => {
                 amount: totalAmount.toFixed(2),
                 // Sửa lại redirectUrl và ipnUrl để phù hợp với môi trường của bạn
                 redirectUrl: 'http://localhost:5173/payment-return',
-                ipnUrl: 'http://localhost:8086/momo-notify',
+                ipnUrl: 'https://be-1lkh.onrender.com/momo-notify',
                 requestType: 'payWithMethod',
                 extraData: '',
                 lang: 'vi',
@@ -265,7 +265,7 @@ const Cart = () => {
             };
 
             // Sửa lại URL endpoint để khớp với route trong server
-            const response = await axios.post('http://localhost:8086/create-momo-payment', momoPaymentData);
+            const response = await axios.post('https://be-1lkh.onrender.com/create-momo-payment', momoPaymentData);
 
             if (response.data && response.data.payUrl) {
                 // Lưu thông tin đơn hàng

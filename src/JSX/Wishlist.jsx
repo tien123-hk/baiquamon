@@ -31,7 +31,7 @@ const Wishlist = () => {
     const fetchWishlist = async (userId) => {
         try {
             console.log('Fetching wishlist for userId:', userId);
-            const response = await axios.get(`http://localhost:8086/wishlist/${userId}`);
+            const response = await axios.get(`https://be-1lkh.onrender.com/wishlist/${userId}`);
             console.log('Full API Response:', response);
             console.log('Wishlist data:', response.data);
             setWishlistItems(response.data);
@@ -43,7 +43,7 @@ const Wishlist = () => {
     const removeItem = async (productId) => {
         if (!user) return;
         try {
-            await axios.delete(`http://localhost:8086/wishlist/${user.id}/${productId}`);
+            await axios.delete(`https://be-1lkh.onrender.com/wishlist/${user.id}/${productId}`);
             setWishlistItems(prevItems => prevItems.filter(item => item.productId !== productId));
             alert('Item removed from wishlist');
         } catch (error) {

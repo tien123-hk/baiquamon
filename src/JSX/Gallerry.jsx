@@ -33,12 +33,12 @@ const Gallery = () => {
 
         try {
             // Check if product already exists in cart
-            const cartResponse = await axios.get(`http://localhost:8086/cart/${user.id}`);
+            const cartResponse = await axios.get(`https://be-1lkh.onrender.com/cart/${user.id}`);
             const existingItem = cartResponse.data.find(item => item.productId === product._id);
 
             if (existingItem) {
                 // Update quantity if product exists
-                await axios.put(`http://localhost:8086/cart/update/${existingItem._id}`, {
+                await axios.put(`https://be-1lkh.onrender.com/cart/update/${existingItem._id}`, {
                     userId: user.id,
                     quantity: existingItem.quantity + 1
                 });
@@ -53,7 +53,7 @@ const Gallery = () => {
                     img: product.img,
                     quantity: 1
                 };
-                const response = await axios.post('http://localhost:8086/cart/add', cartData);
+                const response = await axios.post('https://be-1lkh.onrender.com/cart/add', cartData);
                 if (response.data) {
                     alert('Product added to cart successfully!');
                 }
@@ -66,7 +66,7 @@ const Gallery = () => {
 
     const fetchProducts = async () => {
         try {
-            const response = await axios.get('http://localhost:8086/products');
+            const response = await axios.get('https://be-1lkh.onrender.com/products');
             setProducts(response.data);
         } catch (error) {
             console.error('Error fetching products:', error);

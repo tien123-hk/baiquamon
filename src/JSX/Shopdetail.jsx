@@ -44,7 +44,7 @@ const Shopdetail = () => {
         }
 
         try {
-            const response = await axios.post('http://localhost:8086/wishlist/add', {
+            const response = await axios.post('https://be-1lkh.onrender.com/wishlist/add', {
                 userId: user.id,  // Now this will correctly access the MongoDB _id
                 productId: id,
                 name: product.name,
@@ -70,12 +70,12 @@ const Shopdetail = () => {
     
         try {
             // Check if product already exists in cart
-            const cartResponse = await axios.get(`http://localhost:8086/cart/${user.id}`);
+            const cartResponse = await axios.get(`https://be-1lkh.onrender.com/cart/${user.id}`);
             const existingItem = cartResponse.data.find(item => item.productId === id);
 
             if (existingItem) {
                 // Update quantity if product exists
-                await axios.put(`http://localhost:8086/cart/update/${existingItem._id}`, {
+                await axios.put(`https://be-1lkh.onrender.com/cart/update/${existingItem._id}`, {
                     userId: user.id,
                     quantity: existingItem.quantity + parseInt(inputValue)
                 });
@@ -90,7 +90,7 @@ const Shopdetail = () => {
                     img: product.img,
                     quantity: parseInt(inputValue)
                 };
-                await axios.post('http://localhost:8086/cart/add', cartData);
+                await axios.post('https://be-1lkh.onrender.com/cart/add', cartData);
                 alert('Product added to cart successfully!');
             }
         } catch (error) {
@@ -109,7 +109,7 @@ const Shopdetail = () => {
 
     const fetchProductDetails = async () => {
         try {
-            const response = await axios.get(`http://localhost:8086/products/${id}`);
+            const response = await axios.get(`https://be-1lkh.onrender.com/products/${id}`);
             setProduct(response.data);
         } catch (error) {
             console.error('Error fetching product:', error);

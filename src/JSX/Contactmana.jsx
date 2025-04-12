@@ -13,7 +13,7 @@ const Contactmana = () => {
 
     const fetchReviews = async () => {
         try {
-            const response = await axios.get('http://localhost:8086/BE/contact');
+            const response = await axios.get('https://be-1lkh.onrender.com/BE/contact');
             setReviews(response.data);
             setLoading(false);
         } catch (error) {
@@ -25,7 +25,7 @@ const Contactmana = () => {
     const handleDeleteReview = async (reviewId) => {
         if (window.confirm('Are you sure you want to delete this review?')) {
             try {
-                await axios.delete(`http://localhost:8086/BE/contact/${reviewId}`);
+                await axios.delete(`https://be-1lkh.onrender.com/BE/contact/${reviewId}`);
                 setReviews(reviews.filter(review => review._id !== reviewId));
                 alert('Review deleted successfully');
             } catch (error) {

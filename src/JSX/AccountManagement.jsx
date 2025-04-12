@@ -11,7 +11,7 @@ const AccountManagement = () => {
 
     const fetchAccounts = async () => {
         try {
-            const response = await axios.get('http://localhost:8086/BE/auth/accounts');
+            const response = await axios.get('https://be-1lkh.onrender.com/BE/auth/accounts');
             setAccounts(response.data);
         } catch (error) {
             console.error('Error fetching accounts:', error);
@@ -21,7 +21,7 @@ const AccountManagement = () => {
     const handleDelete = async (accountId) => {
         if (window.confirm('Are you sure you want to delete this account?')) {
             try {
-                await axios.delete(`http://localhost:8086/BE/auth/accounts/${accountId}`);
+                await axios.delete(`https://be-1lkh.onrender.com/BE/auth/accounts/${accountId}`);
                 fetchAccounts(); // Refresh the list after deletion
             } catch (error) {
                 console.error('Error deleting account:', error);
@@ -32,7 +32,7 @@ const AccountManagement = () => {
     const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-        const response = await axios.post('http://localhost:8086/BE/contact', {
+        const response = await axios.post('https://be-1lkh.onrender.com/BE/contact', {
             ...formData,
             rating: parseInt(formData.rating)
         });

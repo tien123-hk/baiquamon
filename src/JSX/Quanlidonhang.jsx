@@ -14,7 +14,7 @@ import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'rec
 
         const handleRevenueClick = async () => {
             try {
-                const response = await axios.get('http://localhost:8086/orders');
+                const response = await axios.get('https://be-1lkh.onrender.com/orders');
                 const orders = response.data;
                 
                 // Calculate total revenue
@@ -54,7 +54,7 @@ import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'rec
 
         const handlePendingOrdersClick = async () => {
             try {
-                const response = await axios.get('http://localhost:8086/orders');
+                const response = await axios.get('https://be-1lkh.onrender.com/orders');
                 setOrders(response.data);
                 setShowPendingOrders(true);
             } catch (error) {
@@ -65,7 +65,7 @@ import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'rec
         const handleConfirmOrder = async (orderId) => {
             try {
                 // Update order status to 'completed'
-                await axios.put(`http://localhost:8086/orders/${orderId}`, {
+                await axios.put(`https://be-1lkh.onrender.com/orders/${orderId}`, {
                     status: 'completed'
                 });
             

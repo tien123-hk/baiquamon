@@ -42,7 +42,7 @@ function Home() {
         }
 
         try {
-            await axios.post('http://localhost:8086/BE/cart/add', {
+            await axios.post('https://be-1lkh.onrender.com/BE/cart/add', {
                 userId: user._id,
                 productId: product.id,
                 name: product.name,

@@ -39,7 +39,7 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:8086/BE/contact', {
+      const response = await axios.post('https://be-1lkh.onrender.com/BE/contact', {
         ...formData,
         rating: parseInt(formData.rating)
       });

@@ -20,7 +20,7 @@ const SidebarShop = () => {
 
     const fetchProducts = async () => {
         try {
-            const response = await axios.get('http://localhost:8086/products/');
+            const response = await axios.get('https://be-1lkh.onrender.com/products/');
             let sortedProducts = [...response.data];
             
             if (sortBy === "price-asc") {
@@ -67,7 +67,7 @@ const SidebarShop = () => {
             
             if (value.trim() === '') {
                 // Nếu không có từ khóa tìm kiếm, lấy tất cả sản phẩm
-                const response = await axios.get('http://localhost:8086/products/');
+                const response = await axios.get('https://be-1lkh.onrender.com/products/');
                 filteredProducts = response.data;
             } else {
                 // Tìm kiếm local trong danh sách sản phẩm hiện tại
@@ -107,12 +107,12 @@ const SidebarShop = () => {
         try {
             const userId = user.user ? user.user.id : user.id;
             // Check if product already exists in cart
-            const cartResponse = await axios.get(`http://localhost:8086/cart/${userId}`);
+            const cartResponse = await axios.get(`https://be-1lkh.onrender.com/cart/${userId}`);
             const existingItem = cartResponse.data.find(item => item.productId === product._id);
 
             if (existingItem) {
                 // Update quantity if product exists
-                await axios.put(`http://localhost:8086/cart/update/${existingItem._id}`, {
+                await axios.put(`https://be-1lkh.onrender.com/cart/update/${existingItem._id}`, {
                     userId: userId,
                     quantity: existingItem.quantity + 1
                 });
@@ -127,7 +127,7 @@ const SidebarShop = () => {
                     img: product.img,
                     quantity: 1
                 };
-                const response = await axios.post('http://localhost:8086/cart/add', cartData);
+                const response = await axios.post('https://be-1lkh.onrender.com/cart/add', cartData);
                 if (response.data) {
                     alert('Product added to cart successfully!');
                 }

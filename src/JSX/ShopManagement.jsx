@@ -21,7 +21,7 @@ const ShopManagement = () => {
 
     const fetchProducts = async () => {
         try {
-            const response = await axios.get('http://localhost:8086/products');
+            const response = await axios.get('https://be-1lkh.onrender.com/products');
             setProducts(response.data);
         } catch (error) {
             console.error('Error fetching products:', error);
@@ -40,7 +40,7 @@ const ShopManagement = () => {
     const handleDelete = async (productId) => {
         if (window.confirm('Are you sure you want to delete this product?')) {
             try {
-                await axios.delete(`http://localhost:8086/products/${productId}`);
+                await axios.delete(`https://be-1lkh.onrender.com/products/${productId}`);
                 fetchProducts();
                 alert('Product deleted successfully!');
             } catch (error) {
@@ -103,11 +103,11 @@ const ShopManagement = () => {
             };
 
             if (isEditing) {
-                await axios.put(`http://localhost:8086/products/${formData._id}`, productData);
+                await axios.put(`https://be-1lkh.onrender.com/products/${formData._id}`, productData);
                 alert("Product updated successfully!");
                 setIsEditing(false);
             } else {
-                await axios.post('http://localhost:8086/products/add', productData);
+                await axios.post('https://be-1lkh.onrender.com/products/add', productData);
                 alert("Product added successfully!");
             }
 
