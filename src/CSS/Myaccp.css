@@ -1,0 +1,49 @@
+.hop{
+    width: 360px;
+    height: 260px;
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    font-family:'Courier New', Courier, monospace;
+    justify-content: center;
+}
+
+.hop img{
+    height: 50px;
+    width: 50px;
+}
+.service-desc{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+.service-desc h4 {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
+}
+.service-desc p {
+    font-size: 16px;
+    color: #6c757d;
+}
+hr{
+    width: 1110px;
+    color: #6c757d;
+}
+
+.hop ul{
+    list-style-type: none;
+    display: flex;
+justify-content: center;
+flex-direction: column;
+padding: 0;
+   
+}
+.hop a{
+text-decoration: none;
+color: black;
+display: flex;
+justify-content: center;
+}

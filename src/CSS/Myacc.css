@@ -1,0 +1,10 @@
+.acc {
+    display: grid;
+    grid-template-columns: repeat(3,400px);
+    padding: 70px 35px;
+  gap: 20px;
+  font-family:'Courier New', Courier, monospace;
+}
+hr{
+    margin: auto;
+}

@@ -1,0 +1,311 @@
+
+
+.body1{
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  width: 100%;
+  height:213px;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+}
+
+.main-top {
+  width: 100%;
+  background: #000000;
+  padding: 10px 0px;
+  height: 30px;
+  color: white;
+  font-size: 14px;
+  align-items: center;
+  font-family:'Courier New', Courier, monospace;
+}
+.row{
+  display: flex;
+  flex-wrap: wrap;
+justify-content: space-between;
+  height: 30px;
+  margin-left: 30px !important;
+}
+.a1{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 50%;
+height: 30px;
+ 
+}
+.custom-select-box {
+
+padding: 4px;
+font-size: 14px;
+background: #b0b435;
+color: #fff;
+border: none;
+border-radius: 0px;
+height: 20px;
+}
+select {
+  border: none; /* Xóa viền của thẻ <select> */
+  outline: none; /* Xóa đường viền khi thẻ <select> được chọn */
+  background-color: transparent; /* Làm nền trong suốt nếu cần */
+}
+.ab {
+  background: #b0b435;
+  color: #fff;
+}
+.right-phone-box {
+  display: flex;
+  align-content: center;
+}
+.right-phone-box p {
+  margin: 0px;
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 30px;
+}
+.right-phone-box  a{
+  color: #fff;
+}
+
+
+.our-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  align-content: center;
+  line-height: 30px;
+}
+.our-link ul  {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  margin: 0 !important;
+  width: 342px;
+  list-style-type: none; /* Xóa dấu chấm */
+  padding-left: 0; /* Loại bỏ khoảng cách thụt đầu dòng nếu cần */
+
+}
+
+
+
+.our-link ul  li  a  {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.login-box  {
+  
+  font-size: 14px;
+  background: #b0b435;
+  color: #fff;
+  border: none;
+  margin-right: 10px;
+}
+.login-box{
+  display: flex;
+    gap: 20px;
+    background-color: black;
+    align-items: center;
+}
+.login-box p{
+  font-size: 20px;
+}
+.login-box button{
+  background: #b0b435
+}
+.main-header {
+  width: 100%;
+}
+
+
+.bb{
+margin-bottom: 0;
+-moz-border-radius: 0px;
+font-family:'Courier New', Courier, monospace;
+-webkit-border-radius: 0px;
+-o-border-radius: 0px;
+border-radius: 0px;
+background-color: #fff;
+border: none;
+z-index: 9;
+
+}
+.container{
+  position: relative;
+  flex-wrap: nowrap;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 15px;
+  margin-left: 99px;
+  margin-right: 99px;
+  height: 131px;
+ 
+}
+.navbar-brand    img {
+  width: 150px;
+}
+.container li a {
+  text-decoration: none;
+}
+.b1 {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  width: 85% ;
+  height: 49px;
+}
+
+.b12 {
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+  padding: 10px;
+  list-style-type: none;
+  color: #000000;
+  align-items: center;
+
+}
+.nav-link {
+  color: #000000;
+
+}
+.attr-nav  {
+  width: 150px;
+  list-style-type: none;
+}
+
+
+
+
+
+
+.b13 {
+  position: relative;
+  display: inline-block; /* Cho phép dropdown xuất hiện dưới các phần tử */
+}
+
+.dropdown-menu {
+  display: none; /* Ẩn dropdown ban đầu */
+  position: absolute;
+  background-color: white;
+  
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-menu p {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-menu p:hover {
+  background-color: #f1f1f1; /* Màu nền khi hover vào mục */
+  color: #b0b435;
+}
+
+.b13 .b14 {
+  cursor: pointer;
+  color: black;
+  text-decoration: none;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center; /* Để các mục trong dropdown căn giữa */
+}
+
+.b13 .dropdown-menu {
+  display: block; /* Hiển thị dropdown khi trạng thái isDropdownOpen là true */
+}
+
+
+
+
+
+
+
+.cover-slides{
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+
+position: relative;
+overflow: hidden;
+width: 100%;
+height: 1024px;
+z-index: -1;
+  
+}
+
+
+.side-menu{
+  gap: 10px;
+    justify-content: center;
+    width: 150px;
+    display: flex;
+    flex-direction: row;
+}
+
+.side-menu img{
+  width: 30px;
+  height: 30px;
+}
+.attr-nav p{
+  color: black;
+  text-decoration-line: none;
+}
+.side-menu{
+  text-decoration: none !important;
+}
+
+
+.cart-icon {
+    display: inline-block;
+    cursor: pointer;
+    margin-left: 20px;
+    vertical-align: middle;
+}
+
+.cart-icon img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.2s ease;
+}
+
+.cart-icon:hover img {
+    transform: scale(1.1);
+}
+
+.cart-link {
+    display: flex;
+    align-items: center;
+    color: #000000;
+}
+
+.cart-link:hover {
+    color: #b0b435;
+}
+.nav-item{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: white !important;
+
+}
+.nav-item button {
+  background-color: #b0b435 !important;
+  border: none;
+  color: white;
+  width: 110px;
+  height: 40px;
+}

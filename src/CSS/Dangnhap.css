@@ -1,0 +1,87 @@
+.popup-overlay1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family:'Courier New', Courier, monospace;
+    z-index: 1000;
+}
+span{
+    margin-right: 12px;
+}
+.popup-overlay1 .popup-container1 {
+    background: white;
+    height: 500px;
+    padding: 20px;
+    width: 550px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    text-align: center;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.popup-container1 .close-btn {
+    position: absolute;
+    background-color: red !important;
+    top: 10px;
+    right: 10px;
+    width: 20px;
+    height: 30px;
+    border: none;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.auth-form input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.auth-form button {
+    padding: 10px;
+    background: #b0b435;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+.auth-form button:hover {
+    background: black;
+}
+
+.toggle-text {
+    margin-top: 10px;
+    color: black;
+    font-size: 14px !important;
+}
+
+.toggle-text span {
+    color: #b0b435;
+    cursor: pointer;
+    font-weight: bold;
+}

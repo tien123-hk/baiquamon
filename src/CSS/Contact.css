@@ -1,0 +1,61 @@
+.contact-box-main {
+    height: 636px;
+    font-family:'Courier New', Courier, monospace;
+    padding: 70px;
+    }
+    .containercontact {
+        display: flex;
+        height: 540px;
+        flex-direction: row;
+    }
+    .contactformright {
+        width: 730px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+
+   form  .row{
+    margin-left: 0 !important;
+    margin-top: 50px;
+   }
+
+    .contactformright  .col-md-12 {
+        position: static;
+        width: 600px;
+        margin-left: 0;
+        display: block;
+        top:0;
+    }
+    .contact-info-left {
+        padding: 20px;
+        background: url(./assets/anh/contact-bg.jpg) no-repeat center;
+        background-size: cover;
+        width: 350px;
+        height: 233px;
+        color: black;
+        text-decoration: none;
+        display: flex;
+    flex-direction: column;
+    gap: 20px;
+    }
+
+    .contact-info-left li{
+    margin: 20px 0px
+    }
+    .submitmess {
+        text-align: center !important;
+        margin-top: 15%;
+    }
+    .submit123{
+        background-color: #b0b435;
+        color: white;
+        border: 0cm;
+        width: 151px;
+        height: 44px;
+        font-size: 15px;
+    }
+    .submit123:hover{
+        background-color: black;
+        color: white;
+    }

@@ -1,0 +1,359 @@
+.row11 {
+    margin-top: 70px;
+    display: flex;
+    font-family:'Courier New', Courier, monospace;
+    flex-wrap: wrap;
+   
+   
+    justify-content: space-around;
+}
+.single-product-slidercarouselslide{
+    color: #FFFFFF;
+    font-size: 13px;
+    padding: 2px 15px;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    gap: 20px;
+   
+    flex-direction: column;
+    display: flex
+;
+}
+
+.single-product-slidercarouselslide .controls {
+    top: 200px;
+    position: absolute;
+    transform: none;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    gap: 347px;
+}
+.single-product-slidercarouselslide .controls button{
+    opacity: 0.5; /* Nút mờ đi mặc định */
+    transition: opacity 0.3s ease;
+    
+}
+.single-product-slidercarouselslide img {
+    width: 414px;
+    height: 415px;
+}
+.carousel-inner {
+    display: flex;
+    overflow: hidden;
+    width: 414px;
+    height: 415px;
+}
+
+
+.carousel-indicators{
+    
+    display: flex;
+    padding: 0px 60px;
+}
+.carousel-indicators img {
+    width: 87px;
+    height: 87px;
+}
+
+.c12{
+    width: 665px;
+    height: 600px;
+
+}
+.single-product-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 20px;
+
+}
+.single-product-details h2 {
+    color: #000000;
+    font-weight: 700;
+    font-size: 24px;
+}
+.single-product-details h5 {
+    color: #b0b435;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.single-product-details h5 del {
+    font-size: 13px;
+    color: #666;
+}
+
+.single-product-details p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+.available-stock span {
+    font-size: 15px;
+}
+
+.available-stock span a {
+    color: #b0b435;
+  text-decoration: none;
+}
+
+.single-product-details h4 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.single-product-details ul {
+    display: inline-block;
+    width: 100%;
+    border: 1px #000000 dashed;
+    margin-bottom: 30px;
+}
+.single-product-details ul li {
+    width: 50%;
+    float: left;
+    padding: 0px 15px;
+    list-style-type: none;
+}
+.single-product-details ul{
+    width: 635px;
+    height: 92px;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: .5rem;
+}
+.quantity-box input {
+    width: 100%;
+}
+.quantity-box input {
+    width: 60px;
+    border: 2px solid #000000;
+    text-align: center;
+}
+.form-control {
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+
+.available-stock {
+color: #666;
+font-size: 16px;
+}
+.form-groupquantity-box {
+    width: 286px;
+    height: 75px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+
+.form-groupquantity-box input {
+    width: 286px;
+    height: 40px;
+    text-align: center;
+}
+
+.price-box-bar {
+    gap: 20px;
+    display: flex;
+    margin-bottom: 30px;
+    width: 300px;
+    height: 44px;
+}
+
+.price-box-bar button {
+    width: 110px;
+    padding: 10px 20px;
+    font-weight: 700;
+    color: #ffffff;
+    border: none;
+    background-color: #b0b435;
+}
+.price-box-bar button:hover{
+    background-color: #000000;
+}
+
+
+.add-comp button {
+    padding: 10px 20px;
+    font-weight: 700;
+    color: #ffffff;
+    border: none;
+    background-color: #b0b435;
+}
+.add-comp button:hover{
+    background-color: #000000;
+}
+.add-to-btn{
+    display: flex;
+    gap :150px;
+}
+.add-comp{
+    width: 321px;
+    height: 44px;
+    display: flex;
+    justify-content: space-around;
+align-items: center;
+}
+.add-to-btn .add-comp a {
+    width: 114px !important;
+    height: 44px  !important;
+    background-color: #b0b435;
+    color: #ffffff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.btnhvr-hover5 {
+    width: 154px !important;
+    height: 44px  !important;
+}
+.share-bar{
+    gap: 20px;
+    display: flex;
+    align-items: center;
+}
+.share-bar img{
+    width: 44px;
+    height: 44px;
+    padding: 7px;
+}
+
+
+
+.rowmy-5{
+  margin-left: 20px;
+    display: flex;
+    flex-wrap: wrap;
+   
+    width: 1140px;
+    height: 440px;
+}
+.cardcard-outline-secondaryy-4{
+     width: 305px;
+     height: 370px;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+}
+.card-header {
+    padding: .75rem 1.25rem;
+    margin-bottom: 0;
+    background-color: rgba(0, 0, 0, .03);
+    border:1px solid #666;
+    font-size:22px
+}
+.card-body {
+    flex: 1 1 auto;
+    padding: 1.25rem;
+    border: 1px solid #666;
+    display: flex;
+    flex-direction: column;
+
+    
+}
+
+.card-body hr{
+    width: 282px;
+} 
+.media {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: start;
+    align-items: flex-start;
+}
+.mr-2, .mx-2 {
+    margin-right: .5rem !important;
+}
+.mr-2 img{
+    width: 50px;
+    height: 50px;
+}
+.p-1 {
+    padding: .25rem !important;
+}
+.rounded-circle {
+    border-radius: 50% !important;
+}
+.border {
+    border: 1px solid #dee2e6 !important;
+}
+
+.text-muted {
+    color: #6c757d !important;
+    padding: 10px 0px;
+        padding: 10px 0px;
+    
+}
+
+.card-outline-secondary .card-body a {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 12px 25px;
+    border: none;
+}
+.btnhvr-hover6::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #000000;
+    border-radius: 100%;
+    transform: scale(0);
+    transition-property: transform;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+}
+.btn6hvr-hover{
+    color: white;
+    background-color: #b0b435;
+    text-decoration:none;
+    font-size: 22px;
+    width: 161px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 40px
+}
+.btn6hvr-hover:hover{
+    background: #000000;
+    color: #ffffff;
+}
+
+.card-body img{
+    object-fit: cover;
+}
+.action-buttons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.social-icons{
+    display: flex;
+    gap: 10px;
+    margin-left: 250px;
+}
+.social-icons img{
+    width: 44px;
+    height: 44px;
+
+
+}

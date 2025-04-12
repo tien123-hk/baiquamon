@@ -1,0 +1,8 @@
+.head{
+    position: sticky;
+    z-index: 1000px;
+    top: 0;
+}
+.app{
+    font-family: 'Courier New', Courier, monospace;
+}
